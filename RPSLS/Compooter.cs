@@ -18,9 +18,9 @@ namespace RPSLS
         }
 
         //member methods (Can DO)
-        public override void SetGestures()
+        public override void ConvertMoveToString(Player move)
         {
-            base.SetGestures();
+            
         }
     }
 }

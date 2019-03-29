@@ -9,9 +9,8 @@ namespace RPSLS
     class Player
     {
         //member variables (Has A)
-        public int score;
-        public string name;
-
+        public int Score;
+        public string Name;
 
         //constructor
         public Player()
