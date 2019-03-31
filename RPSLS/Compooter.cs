@@ -17,7 +17,7 @@ namespace RPSLS
         }
 
         //member methods (Can DO)
-        public override void ConvertMoveToString (Computer move)
+        public override void DecidedMove()
         {
             
         }
