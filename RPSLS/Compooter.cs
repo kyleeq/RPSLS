@@ -10,15 +10,14 @@ namespace RPSLS
     {
         //member variables (Has A)
 
-
         //constructor
         public Compooter()
         {
-
+            Name = "HAL 9000";
         }
 
         //member methods (Can DO)
-        public override void ConvertMoveToString(Player move)
+        public override void ConvertMoveToString (Computer move)
         {
             
         }

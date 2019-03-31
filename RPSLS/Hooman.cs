@@ -13,11 +13,11 @@ namespace RPSLS
         //constructor
         public Hooman()
         {
-
+            Name = Console.ReadLine("Input your name");
         }
 
         //member methods (Can Do)
-        public override void SetGestures()
+        public override void ConvertMoveToString(Hooman move)
         {
 
         }
