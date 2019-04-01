@@ -30,6 +30,8 @@ namespace RPSLS
         //member methods (Can Do)
         public void KickOff()
         {
+            BeginningPrompt();
+            CreatePlayers();
 
         }
         public void BeginningPrompt()
@@ -45,19 +47,19 @@ namespace RPSLS
             int NumberOfPlayers;
             Console.WriteLine("Please enter the number of players.");
             NumberOfPlayers = Convert.ToInt32(Console.ReadLine());
-                if (NumberOfPlayers == 1)
+            if (NumberOfPlayers == 1)
             {
                 Console.WriteLine("You will be playing against HAL 9000");
                 playerOne = new Hooman();
                 playerTwo = new Compooter();
             }
-                else if (NumberOfPlayers == 2)
+            else if (NumberOfPlayers == 2)
             {
                 Console.WriteLine("You will be playing against player 2.");
                 playerOne = new Hooman();
                 playerTwo = new Hooman();
             }
-                else
+            else
             {
                 Console.WriteLine("That's not a valid input. Please enter a valid number of players: 1 or 2.");
                 CreatePlayers();
@@ -65,6 +67,41 @@ namespace RPSLS
             return CreatePlayers();
 
         }
-       
+        public void CompareGestures()
+        {
+            if (playerOneGesture == playerTwoGesture) {
+                Console.WriteLine("It looks like you both entered the same gesture. It's a tie!");
+            }
+            else if (playerOneGesture == "rock" && (playerTwoGesture == "scissors" || playerTwoGesture == "lizard"))
+            {
+                playerOne.Score++;
+                Console.WriteLine(playerOne + " won the round!");
+            }
+            else if (playerOneGesture == "paper" && (playerTwoGesture == "rock" || playerTwoGesture == "spock"))
+            {
+                playerOne.Score++;
+                Console.WriteLine(playerOne + " won the round!");
+            }
+            else if (playerOneGesture == "scissors" && (playerTwoGesture == "paper" || playerTwoGesture == "lizard"))
+            {
+                playerOne.Score++;
+                Console.WriteLine(playerOne + " won the round!");
+            }
+            else if (playerOneGesture == "lizard" && (playerTwoGesture == "spock" || playerTwoGesture == "paper"))
+            {
+                playerOne.Score++;
+                Console.WriteLine(playerOne + " won the round!");
+            }
+            else if (playerOneGesture == "spock" && (playerTwoGesture == "scissors" || playerTwoGesture == "rock"))
+            {
+                playerOne.Score++;
+                Console.WriteLine(playerOne + " won the round!");
+            }
+            else
+            {
+                playerTwo.Score++;
+                Console.WriteLine(playerTwo + " won the round!");
+            }
+        }
     }
 }
