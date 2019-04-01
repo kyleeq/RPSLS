@@ -13,7 +13,8 @@ namespace RPSLS
         //constructor
         public Hooman()
         {
-            name = Console.ReadLine("Input your name");
+            Console.WriteLine("Input your name");
+            name = Console.ReadLine();
         }
 
         //member methods (Can Do)
@@ -21,6 +22,7 @@ namespace RPSLS
         {
             Console.WriteLine(name + ", please enter a gesture");
             string playerOneGesture = Console.ReadLine();
+            return playerOneGesture;
         }
     }
 }
