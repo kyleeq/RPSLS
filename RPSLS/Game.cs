@@ -74,8 +74,7 @@ namespace RPSLS
             }
             else if (NumberOfPlayers == "2")
             {
-                playerOne = new Hooman();
-                Console.WriteLine("Please press 'enter' to continue");
+                playerOne = new Hooman();        
                 playerTwo = new Hooman();
             }
             else
@@ -155,7 +154,7 @@ namespace RPSLS
                     FinalPrompt();
                     break;
                 default:
-                    Console.WriteLine("It seems like you can't follow directions. Please try again with an appropriate input.");
+                    Console.WriteLine("It seems like you can't follow directions. Please try again with an appropriate entry.");
                     FinalPrompt();
                     break;
             }

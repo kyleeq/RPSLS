@@ -22,12 +22,7 @@ namespace RPSLS
         }
 
         //member methods (Can do)
-        public abstract string DecidedMove();
-
-        public void ConvertMove(string move)
-        {
-            
-        }
+        public abstract string DecidedMove();  
 
     }
 }

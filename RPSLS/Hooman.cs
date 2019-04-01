@@ -26,7 +26,7 @@ namespace RPSLS
             {
                 Console.WriteLine(name + ", please enter a gesture");
                 playerOneGesture = Console.ReadLine();
-            } while (gestures.Contains(playerOneGesture));
+            } while (!gestures.Contains(playerOneGesture));
  
             return playerOneGesture;
         }
