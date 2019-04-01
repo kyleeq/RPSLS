@@ -32,11 +32,16 @@ namespace RPSLS
             BeginningPrompt();
             CreatePlayers();
 
-            for (int Rounds = 0; Rounds <= 5; Rounds++)
+            for (int Rounds = 0; Rounds <= 4; Rounds++)
             {
                 playerOneGesture = playerOne.DecidedMove();
                 playerTwoGesture = playerTwo.DecidedMove();
                 CompareGestures(playerOneGesture, playerTwoGesture);
+                    
+                if (playerOne.score == 3 || playerTwo.score == 3)
+                {
+                    break;
+                } 
             }
 
             DecideWinner(playerOne.score, playerTwo.score);
@@ -122,6 +127,27 @@ namespace RPSLS
             else
             {
                 Console.WriteLine("Congratulation " + playerTwo.name + "! You won the game!");
+            }
+        }
+
+        public void FinalPrompt()
+        {
+            Console.WriteLine("Would you like to play again? Please type 'restart' to play again and 'quit' to exit the game");
+            string UserInput = Console.ReadLine();
+
+            switch (UserInput)
+            {
+                case "restart":
+                    KickOff();
+                    break;
+                case "quit":
+                    break;
+                case "banana":
+                    Console.WriteLine("Go home Nevin, you're drunk.");
+                    FinalPrompt();
+                    break;
+                default:
+                    Console.WriteLine("It seems like you can't follow directions. Please try again with an appropriate input.");
             }
         }
         
