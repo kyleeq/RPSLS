@@ -40,6 +40,7 @@ namespace RPSLS
             }
 
             DecideWinner(playerOne.score, playerTwo.score);
+            Console.ReadLine();
         }
         public void BeginningPrompt()
         {
@@ -51,18 +52,18 @@ namespace RPSLS
         }
         public void CreatePlayers()
         {
-            int NumberOfPlayers;
+            string NumberOfPlayers;
             Console.WriteLine("Please enter the number of players.");
-            NumberOfPlayers = Convert.ToInt32(Console.ReadLine());
-            if (NumberOfPlayers == 1)
+            NumberOfPlayers = Console.ReadLine();
+            if (NumberOfPlayers == "1")
             {
                 Console.WriteLine("You will be playing against HAL 9000");
                 playerOne = new Hooman();
                 playerTwo = new Compooter();
             }
-            else if (NumberOfPlayers == 2)
+            else if (NumberOfPlayers == "2")
             {
-                Console.WriteLine("You will be playing against player 2.");
+                Console.WriteLine("You will be playing against play.");
                 playerOne = new Hooman();
                 playerTwo = new Hooman();
             }
