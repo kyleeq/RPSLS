@@ -13,7 +13,7 @@ namespace RPSLS
         //constructor
         public Compooter()
         {
-            Name = "HAL 9000";
+            name = "HAL 9000";
         }
 
         //member methods (Can DO)

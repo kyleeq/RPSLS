@@ -13,7 +13,7 @@ namespace RPSLS
         //constructor
         public Hooman()
         {
-            Name = Console.ReadLine("Input your name");
+            name = Console.ReadLine("Input your name");
         }
 
         //member methods (Can Do)

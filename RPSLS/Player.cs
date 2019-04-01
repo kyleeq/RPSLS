@@ -10,8 +10,8 @@ namespace RPSLS
     {
         //member variables (Has A)
         
-        public int Score;
-        public string Name;
+        public int score;
+        public string name;
         public List<string> gestures = new List<string> {"rock", "paper", "scissors", "lizard", "spock"};
         string move;
 
@@ -28,26 +28,7 @@ namespace RPSLS
         }
         public void ConvertMove(string move)
         {
-            switch (string move)
-            {
-                case 1:
-                    Console.WriteLine("rock");
-                    break;
-                case 2:
-                    Console.WriteLine("paper");
-                    break;
-                case 3:
-                    Console.WriteLine("scissors");
-                    break;
-                case 4:
-                    Console.WriteLine("lizard");
-                    break;
-                case 5:
-                    Console.WriteLine("spock");
-                    break;
-                default:
-                    
-            }
+            
         }
 
     }

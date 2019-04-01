@@ -24,7 +24,6 @@ namespace RPSLS
         {
             NumberOfPlayers = 2;
             Rounds = 5;
-
         }
 
         //member methods (Can Do)
@@ -67,39 +66,40 @@ namespace RPSLS
             return CreatePlayers();
 
         }
-        public void CompareGestures()
+
+        public void CompareGestures(string playerOneGesture, string playerTwoGesture)
         {
             if (playerOneGesture == playerTwoGesture) {
                 Console.WriteLine("It looks like you both entered the same gesture. It's a tie!");
             }
             else if (playerOneGesture == "rock" && (playerTwoGesture == "scissors" || playerTwoGesture == "lizard"))
             {
-                playerOne.Score++;
+                playerOne.score++;
                 Console.WriteLine(playerOne + " won the round!");
             }
             else if (playerOneGesture == "paper" && (playerTwoGesture == "rock" || playerTwoGesture == "spock"))
             {
-                playerOne.Score++;
+                playerOne.score++;
                 Console.WriteLine(playerOne + " won the round!");
             }
             else if (playerOneGesture == "scissors" && (playerTwoGesture == "paper" || playerTwoGesture == "lizard"))
             {
-                playerOne.Score++;
+                playerOne.score++;
                 Console.WriteLine(playerOne + " won the round!");
             }
             else if (playerOneGesture == "lizard" && (playerTwoGesture == "spock" || playerTwoGesture == "paper"))
             {
-                playerOne.Score++;
+                playerOne.score++;
                 Console.WriteLine(playerOne + " won the round!");
             }
             else if (playerOneGesture == "spock" && (playerTwoGesture == "scissors" || playerTwoGesture == "rock"))
             {
-                playerOne.Score++;
+                playerOne.score++;
                 Console.WriteLine(playerOne + " won the round!");
             }
             else
             {
-                playerTwo.Score++;
+                playerTwo.score++;
                 Console.WriteLine(playerTwo + " won the round!");
             }
         }
