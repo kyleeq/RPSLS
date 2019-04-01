@@ -31,15 +31,19 @@ namespace RPSLS
         {
             BeginningPrompt();
             CreatePlayers();
-            playerOne.DecidedMove();
-            playerTwo.DecidedMove();
 
+            for (int Rounds = 0; Rounds <= 5; Rounds++)
+            {
+                playerOne.DecidedMove();
+                playerTwo.DecidedMove();
+                CompareGestures(playerOneGesture, playerTwoGesture);
+            }
         }
         public void BeginningPrompt()
         {
             Console.WriteLine("Welcome to Rock Paper Scissors Lizard Spock.");
-            Console.WriteLine("As seen on the Big Bang Theory, this game follows the rules of the original Rock Paper Scissors but with two new gestures." +
-                "Here are the rules...\nRock crushes Scissors\n Scissors cuts Paper\nPaper covers Rock\nRock crushes Lizard\nLizard poisons Spock\nSpock smashes Scissors\nScissors " +
+            Console.WriteLine("As seen on the Big Bang Theory, this game follows the rules of the original Rock Paper Scissors but with two new gestures.\n" +
+                "Here are the rules...\nRock crushes Scissors\n Scissors cuts Paper\nPaper covers Rock\nRock crushes Lizard\nLizard poisons Spock\nSpock smashes Scissors\nScissors" +
                 "decapitates Lizard\nLizard eats Paper\nPaper disproves Spock\nSpock vaporizes Rock\nPlease press enter when you're ready!");
             Console.ReadLine();
         }
@@ -104,5 +108,7 @@ namespace RPSLS
                 Console.WriteLine(playerTwo + " won the round!");
             }
         }
+
+        
     }
 }
