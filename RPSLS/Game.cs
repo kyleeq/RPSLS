@@ -38,6 +38,8 @@ namespace RPSLS
                 playerTwoGesture = playerTwo.DecidedMove();
                 CompareGestures(playerOneGesture, playerTwoGesture);
             }
+
+            DecideWinner(playerOne.score, playerTwo.score);
         }
         public void BeginningPrompt()
         {
@@ -109,9 +111,10 @@ namespace RPSLS
                 Console.WriteLine(playerTwo.name + " won the round!");
             }
         }
-        public void DecideWinner()
+
+        public void DecideWinner(int P1Score, int P2Score)
         {
-            if (playerOne.score > playerTwo.score)
+            if (P1Score > P2Score)
             {
                 Console.WriteLine("Congratulation " + playerOne.name + "! You won the game!");
             }
