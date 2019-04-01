@@ -15,13 +15,19 @@ namespace RPSLS
         {
             Console.WriteLine("Input your name");
             name = Console.ReadLine();
+                      
         }
 
         //member methods (Can Do)
         public override string DecidedMove()
         {
-            Console.WriteLine(name + ", please enter a gesture");
-            string playerOneGesture = Console.ReadLine();
+            string playerOneGesture;
+            do
+            {
+                Console.WriteLine(name + ", please enter a gesture");
+                playerOneGesture = Console.ReadLine();
+            } while (gestures.Contains(playerOneGesture));
+ 
             return playerOneGesture;
         }
     }
