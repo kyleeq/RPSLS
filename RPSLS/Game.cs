@@ -45,6 +45,7 @@ namespace RPSLS
             }
 
             DecideWinner(playerOne.score, playerTwo.score);
+            FinalPrompt();
             Console.ReadLine();
         }
         public void BeginningPrompt()
@@ -58,7 +59,7 @@ namespace RPSLS
         public void CreatePlayers()
         {
             string NumberOfPlayers;
-            Console.WriteLine("Please enter the number of players.");
+            Console.WriteLine("Please enter the number of players: 1 or 2.");
             NumberOfPlayers = Console.ReadLine();
             if (NumberOfPlayers == "1")
             {
@@ -68,8 +69,9 @@ namespace RPSLS
             }
             else if (NumberOfPlayers == "2")
             {
-                Console.WriteLine("You will be playing against play.");
                 playerOne = new Hooman();
+                Console.WriteLine("Please press 'enter' to continue");
+                Console.ReadLine();
                 playerTwo = new Hooman();
             }
             else
@@ -148,6 +150,8 @@ namespace RPSLS
                     break;
                 default:
                     Console.WriteLine("It seems like you can't follow directions. Please try again with an appropriate input.");
+                    FinalPrompt();
+                    break;
             }
         }
         
