@@ -22,7 +22,7 @@ namespace RPSLS
         }
 
         //member methods (Can do)
-        public virtual void CovertMoveToString(Player move)
+        public virtual void DecidedMove()
         {
             
         }
@@ -32,19 +32,19 @@ namespace RPSLS
             {
                 case 1:
                     Console.WriteLine("rock");
-                break;
+                    break;
                 case 2:
                     Console.WriteLine("paper");
-                break;
+                    break;
                 case 3:
                     Console.WriteLine("scissors");
-                break;
+                    break;
                 case 4:
                     Console.WriteLine("lizard");
-                break;
+                    break;
                 case 5:
                     Console.WriteLine("spock");
-                break;
+                    break;
                 default:
                     
             }

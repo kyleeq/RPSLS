@@ -49,7 +49,7 @@ namespace RPSLS
             }
                 else
             {
-                Console.WriteLine("Please enter a valid number of players. Please enter 1 or 2.");
+                Console.WriteLine("That's not a valid input. Please enter a valid number of players. Please enter 1 or 2.");
                 CreatePlayers();
             }
             return CreatePlayers();

@@ -17,7 +17,7 @@ namespace RPSLS
         }
 
         //member methods (Can Do)
-        public override void ConvertMoveToString(Hooman move)
+        public override void DecidedMove()
         {
 
         }
