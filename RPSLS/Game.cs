@@ -109,7 +109,17 @@ namespace RPSLS
                 Console.WriteLine(playerTwo.name + " won the round!");
             }
         }
-
+        public void DecideWinner()
+        {
+            if (playerOne.score > playerTwo.score)
+            {
+                Console.WriteLine("Congratulation " + playerOne.name + "! You won the game!");
+            }
+            else
+            {
+                Console.WriteLine("Congratulation " + playerTwo.name + "! You won the game!");
+            }
+        }
         
     }
 }
