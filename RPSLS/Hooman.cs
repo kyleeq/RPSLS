@@ -17,9 +17,10 @@ namespace RPSLS
         }
 
         //member methods (Can Do)
-        public override void DecidedMove()
+        public override string DecidedMove()
         {
-
+            Console.WriteLine(name + ", please enter a gesture");
+            string playerOneGesture = Console.ReadLine();
         }
     }
 }
