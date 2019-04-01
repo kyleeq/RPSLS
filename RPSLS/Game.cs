@@ -11,6 +11,8 @@ namespace RPSLS
         //member variables (Has A)
         Player playerOne;
         Player playerTwo;
+        string playerOneGesture;
+        string playerTwoGesture;
         int Rounds;
         int NumberOfPlayers;
 
@@ -26,9 +28,17 @@ namespace RPSLS
         }
 
         //member methods (Can Do)
+        public void KickOff()
+        {
+
+        }
         public void BeginningPrompt()
         {
-            Console.WriteLine("");
+            Console.WriteLine("Welcome to Rock Paper Scissors Lizard Spock.");
+            Console.WriteLine("As seen on the Big Bang Theory, this game follows the rules of the original Rock Paper Scissors but with two new gestures." +
+                "Here are the rules...\nRock crushes Scissors\n Scissors cuts Paper\nPaper covers Rock\nRock crushes Lizard\nLizard poisons Spock\nSpock smashes Scissors\nScissors " +
+                "decapitates Lizard\nLizard eats Paper\nPaper disproves Spock\nSpock vaporizes Rock\nPlease press enter when you're");
+            Console.ReadLine();
         }
         public int CreatePlayers()
         {
@@ -49,7 +59,7 @@ namespace RPSLS
             }
                 else
             {
-                Console.WriteLine("That's not a valid input. Please enter a valid number of players. Please enter 1 or 2.");
+                Console.WriteLine("That's not a valid input. tPlease enter a valid number of players. Please enter 1 or 2.");
                 CreatePlayers();
             }
             return CreatePlayers();
