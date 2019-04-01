@@ -46,7 +46,6 @@ namespace RPSLS
 
             DecideWinner(playerOne.score, playerTwo.score);
             FinalPrompt();
-            Console.ReadLine();
         }
         public void BeginningPrompt()
         {
@@ -82,11 +81,12 @@ namespace RPSLS
 
         }
 
-        public void CompareGestures(string playerOneGesture, string playerTwoGesture)
+        public bool CompareGestures(string playerOneGesture, string playerTwoGesture)
         {
             if (playerOneGesture == playerTwoGesture)
             {
                 Console.WriteLine("It looks like you both entered the same gesture. It's a tie!");
+                return true;
             }
             else if (playerOneGesture == "rock" && (playerTwoGesture == "scissors" || playerTwoGesture == "lizard"))
             {
@@ -118,6 +118,7 @@ namespace RPSLS
                 playerTwo.score++;
                 Console.WriteLine(playerTwo.name + " won the round!");
             }
+            return false;
         }
 
         public void DecideWinner(int P1Score, int P2Score)
