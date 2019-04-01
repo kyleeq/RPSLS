@@ -29,6 +29,7 @@ namespace RPSLS
         //member methods (Can Do)
         public void KickOff()
         {
+            Console.Clear();
             BeginningPrompt();
             CreatePlayers();
 
@@ -36,8 +37,13 @@ namespace RPSLS
             {
                 playerOneGesture = playerOne.DecidedMove();
                 playerTwoGesture = playerTwo.DecidedMove();
-                CompareGestures(playerOneGesture, playerTwoGesture);
-                    
+                bool isTie = CompareGestures(playerOneGesture, playerTwoGesture);
+
+                if (isTie == true)
+                {
+                    Rounds--;
+                }               
+                                               
                 if (playerOne.score == 3 || playerTwo.score == 3)
                 {
                     break;
@@ -85,38 +91,38 @@ namespace RPSLS
         {
             if (playerOneGesture == playerTwoGesture)
             {
-                Console.WriteLine("It looks like you both entered the same gesture. It's a tie!");
+                Console.WriteLine("It looks like you both entered the same gesture. It's a tie! Great minds think alike!\n");
                 return true;
             }
             else if (playerOneGesture == "rock" && (playerTwoGesture == "scissors" || playerTwoGesture == "lizard"))
             {
                 playerOne.score++;
-                Console.WriteLine(playerOne.name + " won the round!");
+                Console.WriteLine(playerOne.name + " won the round!\n");
             }
             else if (playerOneGesture == "paper" && (playerTwoGesture == "rock" || playerTwoGesture == "spock"))
             {
                 playerOne.score++;
-                Console.WriteLine(playerOne.name + " won the round!");
+                Console.WriteLine(playerOne.name + " won the round!\n");
             }
             else if (playerOneGesture == "scissors" && (playerTwoGesture == "paper" || playerTwoGesture == "lizard"))
             {
                 playerOne.score++;
-                Console.WriteLine(playerOne.name + " won the round!");
+                Console.WriteLine(playerOne.name + " won the round!\n");
             }
             else if (playerOneGesture == "lizard" && (playerTwoGesture == "spock" || playerTwoGesture == "paper"))
             {
                 playerOne.score++;
-                Console.WriteLine(playerOne.name + " won the round!");
+                Console.WriteLine(playerOne.name + " won the round!\n");
             }
             else if (playerOneGesture == "spock" && (playerTwoGesture == "scissors" || playerTwoGesture == "rock"))
             {
                 playerOne.score++;
-                Console.WriteLine(playerOne.name + " won the round!");
+                Console.WriteLine(playerOne.name + " won the round!\n");
             }
             else
             {
                 playerTwo.score++;
-                Console.WriteLine(playerTwo.name + " won the round!");
+                Console.WriteLine(playerTwo.name + " won the round!\n");
             }
             return false;
         }
@@ -125,11 +131,11 @@ namespace RPSLS
         {
             if (P1Score > P2Score)
             {
-                Console.WriteLine("Congratulation " + playerOne.name + "! You won the game!");
+                Console.WriteLine("Congratulation " + playerOne.name + "! You won the game!\n");
             }
             else
             {
-                Console.WriteLine("Congratulation " + playerTwo.name + "! You won the game!");
+                Console.WriteLine("Congratulation " + playerTwo.name + "! You won the game!\n");
             }
         }
 
