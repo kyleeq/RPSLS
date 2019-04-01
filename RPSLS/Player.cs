@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class Player
+    public abstract class Player
     {
         //member variables (Has A)
         
@@ -22,10 +22,8 @@ namespace RPSLS
         }
 
         //member methods (Can do)
-        public virtual void DecidedMove()
-        {
-            
-        }
+        public abstract string DecidedMove();
+
         public void ConvertMove(string move)
         {
             

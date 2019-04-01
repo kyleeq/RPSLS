@@ -41,7 +41,7 @@ namespace RPSLS
                 "decapitates Lizard\nLizard eats Paper\nPaper disproves Spock\nSpock vaporizes Rock\nPlease press enter when you're");
             Console.ReadLine();
         }
-        public int CreatePlayers()
+        public void CreatePlayers()
         {
             int NumberOfPlayers;
             Console.WriteLine("Please enter the number of players.");
@@ -63,7 +63,6 @@ namespace RPSLS
                 Console.WriteLine("That's not a valid input. Please enter a valid number of players: 1 or 2.");
                 CreatePlayers();
             }
-            return CreatePlayers();
 
         }
 
