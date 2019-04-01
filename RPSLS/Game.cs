@@ -31,6 +31,8 @@ namespace RPSLS
         {
             BeginningPrompt();
             CreatePlayers();
+            playerOne.DecidedMove();
+            playerTwo.DecidedMove();
 
         }
         public void BeginningPrompt()
@@ -38,7 +40,7 @@ namespace RPSLS
             Console.WriteLine("Welcome to Rock Paper Scissors Lizard Spock.");
             Console.WriteLine("As seen on the Big Bang Theory, this game follows the rules of the original Rock Paper Scissors but with two new gestures." +
                 "Here are the rules...\nRock crushes Scissors\n Scissors cuts Paper\nPaper covers Rock\nRock crushes Lizard\nLizard poisons Spock\nSpock smashes Scissors\nScissors " +
-                "decapitates Lizard\nLizard eats Paper\nPaper disproves Spock\nSpock vaporizes Rock\nPlease press enter when you're");
+                "decapitates Lizard\nLizard eats Paper\nPaper disproves Spock\nSpock vaporizes Rock\nPlease press enter when you're ready!");
             Console.ReadLine();
         }
         public void CreatePlayers()
