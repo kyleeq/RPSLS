@@ -34,16 +34,16 @@ namespace RPSLS
 
             for (int Rounds = 0; Rounds <= 5; Rounds++)
             {
-                playerOne.DecidedMove();
-                playerTwo.DecidedMove();
+                playerOneGesture = playerOne.DecidedMove();
+                playerTwoGesture = playerTwo.DecidedMove();
                 CompareGestures(playerOneGesture, playerTwoGesture);
             }
         }
         public void BeginningPrompt()
         {
-            Console.WriteLine("Welcome to Rock Paper Scissors Lizard Spock.");
-            Console.WriteLine("As seen on the Big Bang Theory, this game follows the rules of the original Rock Paper Scissors but with two new gestures.\n" +
-                "Here are the rules...\nRock crushes Scissors\n Scissors cuts Paper\nPaper covers Rock\nRock crushes Lizard\nLizard poisons Spock\nSpock smashes Scissors\nScissors" +
+            Console.WriteLine("Welcome to Rock Paper Scissors Lizard Spock!");
+            Console.WriteLine("As seen on the Big Bang Theory, this game follows the rules of the original Rock Paper Scissors but with two new gestures.\n\n" +
+                "Here are the rules...\n\nRock crushes Scissors\nScissors cuts Paper\nPaper covers Rock\nRock crushes Lizard\nLizard poisons Spock\nSpock smashes Scissors\nScissors" +
                 "decapitates Lizard\nLizard eats Paper\nPaper disproves Spock\nSpock vaporizes Rock\nPlease press enter when you're ready!");
             Console.ReadLine();
         }
@@ -74,38 +74,39 @@ namespace RPSLS
 
         public void CompareGestures(string playerOneGesture, string playerTwoGesture)
         {
-            if (playerOneGesture == playerTwoGesture) {
+            if (playerOneGesture == playerTwoGesture)
+            {
                 Console.WriteLine("It looks like you both entered the same gesture. It's a tie!");
             }
             else if (playerOneGesture == "rock" && (playerTwoGesture == "scissors" || playerTwoGesture == "lizard"))
             {
                 playerOne.score++;
-                Console.WriteLine(playerOne + " won the round!");
+                Console.WriteLine(playerOne.name + " won the round!");
             }
             else if (playerOneGesture == "paper" && (playerTwoGesture == "rock" || playerTwoGesture == "spock"))
             {
                 playerOne.score++;
-                Console.WriteLine(playerOne + " won the round!");
+                Console.WriteLine(playerOne.name + " won the round!");
             }
             else if (playerOneGesture == "scissors" && (playerTwoGesture == "paper" || playerTwoGesture == "lizard"))
             {
                 playerOne.score++;
-                Console.WriteLine(playerOne + " won the round!");
+                Console.WriteLine(playerOne.name + " won the round!");
             }
             else if (playerOneGesture == "lizard" && (playerTwoGesture == "spock" || playerTwoGesture == "paper"))
             {
                 playerOne.score++;
-                Console.WriteLine(playerOne + " won the round!");
+                Console.WriteLine(playerOne.name + " won the round!");
             }
             else if (playerOneGesture == "spock" && (playerTwoGesture == "scissors" || playerTwoGesture == "rock"))
             {
                 playerOne.score++;
-                Console.WriteLine(playerOne + " won the round!");
+                Console.WriteLine(playerOne.name + " won the round!");
             }
             else
             {
                 playerTwo.score++;
-                Console.WriteLine(playerTwo + " won the round!");
+                Console.WriteLine(playerTwo.name + " won the round!");
             }
         }
 
